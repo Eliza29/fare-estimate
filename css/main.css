@@ -25,3 +25,6 @@ button{
 .marker-icon i:hover{
    color: #BE319A;
 }
+.col-sm-4{
+    outline: 1px solid red;
+}
