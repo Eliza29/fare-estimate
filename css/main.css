@@ -19,3 +19,9 @@ button{
 .text-styles{
     font-family: 'Roboto Condensed', sans-serif;
 }
+.marker-icon i{
+    font-size:18px;
+}
+.marker-icon i:hover{
+   color: #BE319A;
+}
