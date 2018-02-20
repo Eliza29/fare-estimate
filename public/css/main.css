@@ -3,6 +3,14 @@
 font-family: 'Roboto Condensed', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
+.height {
+    height: 90vh;
+}
+
+.w-1 {
+    width: 100%;
+}
+
 button{
     background-color: #BE319A;
     border:none;
@@ -12,19 +20,25 @@ button{
     padding: 4px 10px;
     text-decoration: none;    
 }
+
 .title{
     font-family: 'Maven Pro', sans-serif; 
     font-size: 24px;
 }
+
 .text-styles{
     font-family: 'Roboto Condensed', sans-serif;
 }
+
 .marker-icon i{
     font-size:18px;
 }
+
 .marker-icon i:hover{
    color: #BE319A;
 }
-.col-sm-4{
+
+.col-sm-11 {
     outline: 1px solid red;
 }
+
