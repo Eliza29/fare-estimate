@@ -44,18 +44,21 @@ let calculateAndDisplayRoute = (directionsService, directionsDisplay) => {
 };
 
 // funcionalidad para estimar el precio de la ruta con API UBER
-let succes = (data) => {
+let succes = (data) => { debugger;
   console.log(data);
+  // console.log(data.prices[0].low_estimate);  
+  // let poolLow = data.prices[0].low_estimate;
+  // console.log(poolLow);
   // almacenando el rago de precios en string
-  let priceUberPool = `${data[0].low_estimate} - ${data[0].high_estimate}`;
-  let priceUberBlack = `${data[1].low_estimate} - ${data[1].high_estimate}`;
-  let priceUberX = `${data[2].low_estimate} - ${data[2].high_estimate}`;
-  let priceUberVan = `${data[3].low_estimate} - ${data[3].high_estimate}`;
+  let priceUberPool = `${data.prices[0].low_estimate} - ${data.prices[0].high_estimate}`;
+  let priceUberBlack = `${data.prices[1].low_estimate} - ${data.prices[1].high_estimate}`;
+  let priceUberX = `${data.prices[2].low_estimate} - ${data.prices[2].high_estimate}`;
+  let priceUberVan = `${data.prices[3].low_estimate} - ${data.prices[3].high_estimate}`;
   
   $('#black').text(priceUberBlack);              
   $('#van').text(priceUberVan);                    
-  $('#x').text(riceUberX);
-  $('#pool').text(priceUberPool );
+  $('#x').text(priceUberX);
+  $('#pool').text(priceUberPool);
 };
 
 let handleError = () => {
@@ -97,8 +100,7 @@ function initMap() {
   let initRoad = (event) => {
     event.preventDefault();
     calculateAndDisplayRoute(directionsService, directionsDisplay);
-    succes();
-
+    // succes();
   };
   autocompleteInputs();
  
