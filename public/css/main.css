@@ -6,12 +6,14 @@ font-family: 'Roboto', sans-serif; */
 .height {
     height: 90vh;
 }
-
+.height2{
+    margin-top: 4%;
+}
 .w-1 {
     width: 100%;
 }
 
-button{
+.purple{
     background-color: #BE319A;
     border:none;
     border-color: #BE319A;
@@ -38,7 +40,15 @@ button{
    color: #BE319A;
 }
 
-.col-sm-11 {
-    outline: 1px solid red;
+.box-intro {
+    border:1px solid rgba(190, 187, 187, 0.938);
+}
+.change-position{
+    position: relative;
 }
 
+@media only screen and (min-width: 920px) {
+   .change-position{
+       position:absolute;
+   }
+}
