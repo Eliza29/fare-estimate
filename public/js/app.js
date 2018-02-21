@@ -46,7 +46,11 @@ let calculateAndDisplayRoute = (directionsService, directionsDisplay) => {
 // funcionalidad para estimar el precio de la ruta con API UBER
 let succes = (data) => {
   console.log(data);
-  console.log('estoy en succes');
+  // almacenando el rago de precios en string
+  let priceUberPool = `${data[0].low_estimate} - ${data[0].high_estimate}`;
+  let priceUberBalck = `${data[1].low_estimate} - ${data[1].high_estimate}`;
+  let priceUberX = `${data[2].low_estimate} - ${data[2].high_estimate}`;
+  let priceUberVan = `${data[3].low_estimate} - ${data[3].high_estimate}`;
 };
 
 let handleError = () => {
