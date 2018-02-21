@@ -46,6 +46,9 @@ font-family: 'Roboto', sans-serif; */
 .change-position{
     position: relative;
 }
+.options-car div{
+    border:1px solid grey;
+}
 
 @media only screen and (min-width: 920px) {
    .change-position{
