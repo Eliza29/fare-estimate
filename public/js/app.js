@@ -48,9 +48,14 @@ let succes = (data) => {
   console.log(data);
   // almacenando el rago de precios en string
   let priceUberPool = `${data[0].low_estimate} - ${data[0].high_estimate}`;
-  let priceUberBalck = `${data[1].low_estimate} - ${data[1].high_estimate}`;
+  let priceUberBlack = `${data[1].low_estimate} - ${data[1].high_estimate}`;
   let priceUberX = `${data[2].low_estimate} - ${data[2].high_estimate}`;
   let priceUberVan = `${data[3].low_estimate} - ${data[3].high_estimate}`;
+  
+  $('#black').text(priceUberBlack);              
+  $('#van').text(priceUberVan);                    
+  $('#x').text(riceUberX);
+  $('#pool').text(priceUberPool );
 };
 
 let handleError = () => {
@@ -92,8 +97,11 @@ function initMap() {
   let initRoad = (event) => {
     event.preventDefault();
     calculateAndDisplayRoute(directionsService, directionsDisplay);
+    succes();
+
   };
   autocompleteInputs();
+ 
   // asociando evento a elemento del DOM 
   btnRoad.addEventListener('click', initRoad);
 }
