@@ -47,7 +47,10 @@
     border:1px solid grey;
     margin:2px 0; 
 }
-
+.margin-1{
+    margin-left: 10px;
+}
+/* versión desktop */
 @media only screen and (min-width: 920px) {
    .change-position{
        position:absolute;

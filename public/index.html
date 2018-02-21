@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
   <link rel="stylesheet" href="css/main.css">
   <title>Fare Estimate</title>
 </head>
-
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -48,12 +46,13 @@
       </div>
     </nav>
   </header>
+  <!-- mapa y estimador de tarifa -->
   <section>
     <div class="container-fluid position-relative">
       <div class="row height position-relative">
         <div id="map" class="col-12 height"></div>
         <div class="row change-position align-items-center height2" id="section-search-map">
-            <div class="col-sm-6 offset-sm-1">
+            <div class="col-sm-5 offset-sm-1">
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-11 py-3 px-4 mt-3 bg-white box-intro d-none d-sm-block d-lg-block">
@@ -68,13 +67,13 @@
                       <input id="inputFrom" type="text" class="form-control" placeholder="Ingresa el punto de partida" aria-label="Recipient's username"
                         aria-describedby="basic-addon2">
                       <div class="input-group-append">
-                        <button class="btn btn-outline-secondary purple" type="button" id="btn-my-location">Button</button>
+                        <button class="btn btn-outline-secondary purple" type="button" id="btn-my-location"><i class="fas fa-location-arrow"></i></button>
                       </div>
                     </div>
                     <div class="input-group">
                       <input id="inputTo" type="text" class="form-control" placeholder="Ingresa un destino" aria-label="Recipient's username" aria-describedby="basic-addon2">
                       <div class="input-group-append">
-                        <button class="btn btn-outline-secondary purple" type="button" id="search-road">Button</button>
+                        <button class="btn btn-outline-secondary purple" type="button" id="search-road"><i class="fas fa-angle-double-right"></i></button>
                       </div>
                     </div>
                   </div>
@@ -83,22 +82,21 @@
                   <div class="col-sm-11 py-3 px-4 mt-3 bg-white box-intro">
                     <h6>Tus opciones:</h6>
                     <div class="options-car">
-                      <div>UBerBLACK <span id="black">S/.</span></div>
-                      <div>uberX <span id="x">S/.</span></div>
-                      <div>uberVAN <span id="van">S/.</span></div>
-                      <div>uberPOOL <span id="pool">S/.</span></div>
+                      <div>UberBLACK <span id="black"class="ml-3"></span></div>
+                      <div>uberX <span id="x" class="ml-5"></span></div>
+                      <div>uberVAN <span id="van" class="ml-4"></span></div>
+                      <div>uberPOOL <span id="pool" class="ml-4"></span></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-    
           </div>
-      </div>
-      
+      </div>    
     </div>
   </section>
 
+  
   <!-- script -->
   <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVy9sxy4dToErPKrImIhj5wRStDXAVK44&callback=initMap&libraries=places">

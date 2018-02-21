@@ -51,10 +51,10 @@ let succes = (data) => { debugger;
   let priceUberX = `${data.prices[2].low_estimate} - ${data.prices[2].high_estimate}`;
   let priceUberVan = `${data.prices[3].low_estimate} - ${data.prices[3].high_estimate}`;
   
-  $('#black').text(priceUberBlack);              
-  $('#van').text(priceUberVan);                    
-  $('#x').text(priceUberX);
-  $('#pool').text(priceUberPool);
+  $('#black').text('S/.'+ priceUberBlack);              
+  $('#van').text('S/.'+ priceUberVan);                    
+  $('#x').text('S/.'+ priceUberX);
+  $('#pool').text('S/.'+ priceUberPool);
 };
 
 let handleError = () => {
@@ -96,7 +96,6 @@ function initMap() {
   let initRoad = (event) => {
     event.preventDefault();
     calculateAndDisplayRoute(directionsService, directionsDisplay);
-    // succes();
   };
   autocompleteInputs();
  
